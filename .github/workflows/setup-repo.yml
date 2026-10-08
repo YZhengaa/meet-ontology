@@ -1636,6 +1636,10 @@ jobs:
           git remote remove origin 2>/dev/null || true
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git remote -v
+          
+          # Synchronize with any commits made to main while this workflow was running
+          git fetch origin "${{ github.ref_name }}"
+          git rebase "origin/${{ github.ref_name }}"
 
           git push origin HEAD:${{ github.ref_name }}
           echo "Changes committed and pushed to ${{ github.ref_name }}."
