@@ -21,7 +21,7 @@ Import(<https://w3id.org/pmd/co/meet/imports/pmdco_import.owl>)
 Annotation(dcterms:description "PMD Core application ontology generated via ODK Template.
 ")
 Annotation(dcterms:license <https://w3id.org/pmd/co/meet.owl#CC-BY-4.0>)
-Annotation(dcterms:title "Material Experimental and Testing Exchange Ontology  3.")
+Annotation(dcterms:title "Material Experimental and Testing Exchange Ontology")
 
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
