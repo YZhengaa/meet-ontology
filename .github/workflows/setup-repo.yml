@@ -139,7 +139,7 @@ jobs:
           PREFIX=$(echo "$ID" | tr '[:lower:]' '[:upper:]')     # e.g. "AUTOCE"
 
           # Base IRIs used throughout this step and downstream steps
-          ONTBASE="https://w3id.org/pmd/${LOWER_ID}"
+          ONTBASE="https://w3id.org/pmd/co/${LOWER_ID}"
           COMPBASE="${ONTBASE}/components"
           IMPORTBASE="${ONTBASE}/imports"
 
@@ -162,8 +162,8 @@ jobs:
           # correct directory-style IRI: https://w3id.org/pmd/{lower_id}/
           # Without the trailing slash ODK would generate incorrect file IRIs.
           # ------------------------------------------------------------------
-          yq -i ".uribase = \"https://w3id.org/pmd\""               "$CONFIG"
-          yq -i ".uribase_suffix = \"$LOWER_ID/\""                  "$CONFIG"
+          yq -i ".uribase = \"https://w3id.org/pmd/co\""               "$CONFIG"
+          yq -i ".uribase_suffix = \"$LOWER_ID\""                  "$CONFIG"
           yq -i ".preferredPrefix = \"$PREFIX\""                     "$CONFIG"
 
           # ------------------------------------------------------------------
@@ -755,7 +755,7 @@ jobs:
           set -euo pipefail
           ID="${{ github.event.inputs.ontology_id }}"
           LOWER_ID=$(echo "$ID" | tr '[:upper:]' '[:lower:]')
-          ONTBASE="https://w3id.org/pmd/${LOWER_ID}"
+          ONTBASE="https://w3id.org/pmd/co/${LOWER_ID}"
           IMPORTBASE="${ONTBASE}/imports"
 
           mkdir -p src/ontology/imports
@@ -819,7 +819,7 @@ jobs:
           ID="${{ github.event.inputs.ontology_id }}"
           LOWER_ID=$(echo "$ID" | tr '[:upper:]' '[:lower:]')
           CATALOG="src/ontology/catalog-v001.xml"
-          ONTBASE="https://w3id.org/pmd/${LOWER_ID}"
+          ONTBASE="https://w3id.org/pmd/co/${LOWER_ID}"
 
           if [ ! -f "$CATALOG" ]; then
             echo "ERROR: $CATALOG not found — ODK seed may have failed."
@@ -897,7 +897,7 @@ jobs:
           set -euo pipefail
           ID="${{ github.event.inputs.ontology_id }}"
           LOWER_ID=$(echo "$ID" | tr '[:upper:]' '[:lower:]')
-          ONTBASE="https://w3id.org/pmd/${LOWER_ID}"
+          ONTBASE="https://w3id.org/pmd/co/${LOWER_ID}"
           COMPBASE="${ONTBASE}/components"
           IMPORTBASE="${ONTBASE}/imports"
 
@@ -1047,8 +1047,8 @@ jobs:
           echo "Scanning for double slashes in OWL files..."
           fixed=0
           while IFS= read -r file; do
-            if grep -q "https://w3id.org/pmd/${LOWER_ID}//" "$file" 2>/dev/null; then
-              sed -i "s|https://w3id.org/pmd/${LOWER_ID}//|https://w3id.org/pmd/${LOWER_ID}/|g" "$file"
+            if grep -q "https://w3id.org/pmd/co/${LOWER_ID}//" "$file" 2>/dev/null; then
+              sed -i "s|https://w3id.org/pmd/co/${LOWER_ID}//|https://w3id.org/pmd/co/${LOWER_ID}/|g" "$file"
               echo "  Fixed double slashes in: $file"
               fixed=$((fixed + 1))
             fi
@@ -1108,7 +1108,7 @@ jobs:
           if [ ${#MISSING_FILES[@]} -gt 0 ]; then
             echo ""
             echo "Creating stub files for ${#MISSING_FILES[@]} missing component(s)..."
-            ONTBASE="https://w3id.org/pmd/${LOWER_ID}"
+            ONTBASE="https://w3id.org/pmd/co/${LOWER_ID}"
             COMPBASE="${ONTBASE}/components"
             SHARED_IRI="${COMPBASE}/${LOWER_ID}-shared.owl"
             UPPER_ID=$(echo "$ID" | tr '[:lower:]' '[:upper:]')
@@ -1330,7 +1330,7 @@ jobs:
           set -euo pipefail
           LOWER_ID=$(echo "${{ github.event.inputs.ontology_id }}" | tr '[:upper:]' '[:lower:]')
           EDIT_FILE="src/ontology/${LOWER_ID}-edit.owl"
-          ONT_IRI="https://w3id.org/pmd/${LOWER_ID}/"
+          ONT_IRI="https://w3id.org/pmd/co/${LOWER_ID}/"
 
           if [ -f "$EDIT_FILE" ]; then
             robot annotate \
@@ -1395,7 +1395,7 @@ jobs:
           ID="${{ github.event.inputs.ontology_id }}"
           LOWER_ID=$(echo "$ID" | tr '[:upper:]' '[:lower:]')
           UPPER_ID=$(echo "$ID" | tr '[:lower:]' '[:upper:]')
-          ONTBASE="https://w3id.org/pmd/${LOWER_ID}"
+          ONTBASE="https://w3id.org/pmd/co/${LOWER_ID}"
           COMPBASE="${ONTBASE}/components"
           SHARED_IRI="${COMPBASE}/${LOWER_ID}-shared.owl"
 
@@ -1624,7 +1624,7 @@ jobs:
           git commit -m "chore: Initial seed setup of ${UPPER_ID} ontology
           
           Auto-generated via 'Setup New Ontology' GitHub Actions workflow:
-          - Configured project-odk.yaml (URI base: https://w3id.org/pmd/${LOWER_ID}/)
+          - Configured project-odk.yaml (URI base: https://w3id.org/pmd/co/${LOWER_ID}/)
           - imports-edit.owl aggregates all *_import.owl modules
           - ${LOWER_ID}-shared.owl imports imports-edit.owl (shared base for all components)
           - Each ${LOWER_ID}-{component}.owl imports ${LOWER_ID}-shared.owl with annotations
