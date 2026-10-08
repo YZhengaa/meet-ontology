@@ -1633,12 +1633,21 @@ jobs:
           - Generated ${LOWER_ID}-edit.owl (ontology source) and ${LOWER_ID}-idranges.owl
           - Initialized ROBOT template TSV files in src/templates/" \
           || echo "No changes to commit — repository may already be up to date."
-
-          git remote remove origin 2>/dev/null || true
-          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-          git remote -v
+          # Save the generated ontology commit
+          GENERATED_COMMIT=$(git rev-parse HEAD)
           
+          # Get the latest remote main
+          git fetch origin "${{ github.ref_name }}"
+          
+          # Start from the latest remote main
+          git checkout -B workflow-push "origin/${{ github.ref_name }}"
+          
+          # Apply only the generated ontology commit on top
+          git cherry-pick "$GENERATED_COMMIT"
+          
+          # Push the updated history
           git push origin HEAD:${{ github.ref_name }}
+          
           echo "Changes committed and pushed to ${{ github.ref_name }}."
 
       # ========================================================================
