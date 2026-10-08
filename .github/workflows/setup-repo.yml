@@ -1637,6 +1637,11 @@ jobs:
           git remote remove origin 2>/dev/null || true
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git remote -v
+
+          # .github is intentionally excluded from the generated ontology commit.
+          # Remove the local untracked copy before rebasing; it will be restored
+          # from the tracked files on origin/main during the rebase.
+          rm -rf .github
           
           # Synchronize with any commits made to main while this workflow was running
           git fetch origin "${{ github.ref_name }}"
