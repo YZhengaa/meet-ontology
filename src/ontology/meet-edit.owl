@@ -22,6 +22,7 @@ Annotation(dcterms:description "PMD Core application ontology generated via ODK 
 ")
 Annotation(dcterms:license <https://w3id.org/pmd/co/meet.owl#CC-BY-4.0>)
 Annotation(dcterms:title "Material Experimental and Testing Exchange Ontology")
+Annotation(dcterms:creator "Yuan Zheng")
 
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
