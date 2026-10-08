@@ -440,7 +440,7 @@ jobs:
           rm -rf "$TARGET_DIR/.github"
 
           # Copy all generated files to the repo root
-          cp -r "$TARGET_DIR"/. .
+          cp -r "$TARGET_DIR"/* .
 
           # .gitignore is a hidden file; cp with glob may miss it
           if [ -f "$TARGET_DIR/.gitignore" ]; then cp "$TARGET_DIR/.gitignore" .; fi
@@ -449,6 +449,11 @@ jobs:
           rm -rf target/
 
           echo "Files moved from $TARGET_DIR → repository root."
+
+          # Diagnostic checks
+          echo "=== Git status after copy ==="
+          git remote -v
+          git status --short .github
 
       # ========================================================================
       # STEP 6.5: Fix README Placeholders
