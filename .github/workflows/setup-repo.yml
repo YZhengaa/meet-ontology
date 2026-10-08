@@ -437,6 +437,7 @@ jobs:
           # custom workflows — never let ODK overwrite them.
           echo "Preserving existing .github/ workflows (removing ODK defaults)..."
           rm -rf "$TARGET_DIR/.github"
+          rm -rf "$TARGET_DIR/.github"
 
           # Copy all generated files to the repo root
           cp -r "$TARGET_DIR"/. .
