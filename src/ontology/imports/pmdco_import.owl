@@ -963,7 +963,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000520> "Wärmeflus
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000520> "heat flow"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000520> obo:BFO_0000015)
 
-# Class: <https://w3id.org/pmd/co/PMD_0000553> (chemical potential)
+# Class: <https://w3id.org/pmd/co/PMD_0000553> (chemisches Potential)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemical potential"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemisches Potential"@de)
