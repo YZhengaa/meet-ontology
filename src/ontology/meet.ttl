@@ -23,7 +23,7 @@
                                     dcterms:description """PMD Core application ontology generated via ODK Template.
 """ ;
                                     dcterms:license <https://w3id.org/pmd/co/meet.owl#CC-BY-4.0> ;
-                                    dcterms:title "Material Experimental and Testing Exchange Ontology  3." ;
+                                    dcterms:title "Material Experimental and Testing Exchange Ontology" ;
                                     owl:versionInfo "2026-10-08" .
 
 #################################################################
