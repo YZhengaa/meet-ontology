@@ -1633,6 +1633,10 @@ jobs:
           - Initialized ROBOT template TSV files in src/templates/" \
           || echo "No changes to commit — repository may already be up to date."
 
+          git remote remove origin 2>/dev/null || true
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git remote -v
+
           git push origin HEAD:${{ github.ref_name }}
           echo "Changes committed and pushed to ${{ github.ref_name }}."
 
