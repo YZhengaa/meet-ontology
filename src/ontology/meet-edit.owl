@@ -1,0 +1,47 @@
+Prefix(:=<https://w3id.org/pmd/co/meet/>)
+Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<https://w3id.org/pmd/co/meet/>
+Import(<https://w3id.org/pmd/co/meet/components/imports-edit.owl>)
+Import(<https://w3id.org/pmd/co/meet/components/meet-axioms-shared.owl>)
+Import(<https://w3id.org/pmd/co/meet/components/meet-dismantling_data.owl>)
+Import(<https://w3id.org/pmd/co/meet/components/meet-material_data.owl>)
+Import(<https://w3id.org/pmd/co/meet/components/meet-process_data.owl>)
+Import(<https://w3id.org/pmd/co/meet/components/meet-shared.owl>)
+Import(<https://w3id.org/pmd/co/meet/components/meet-sustainability_info.owl>)
+Import(<https://w3id.org/pmd/co/meet/imports/pmdco_import.owl>)
+Annotation(dcterms:description "PMD Core application ontology generated via ODK Template.
+")
+Annotation(dcterms:license <https://w3id.org/pmd/co/meet.owl#CC-BY-4.0>)
+Annotation(dcterms:title "Material Experimental and Testing Exchange Ontology  3.")
+
+Declaration(AnnotationProperty(dcterms:description))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:title))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: dcterms:description (description)
+
+AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (dcterms:license)
+
+AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:title (title)
+
+AnnotationAssertion(rdfs:label dcterms:title "title")
+
+
+
+)

@@ -1,0 +1,4 @@
+ID	Label	Parent Class
+ID	A rdfs:label	SC %
+https://w3id.org/pmd/co/PMD_0000000	material	https://w3id.org/pmd/co/PMD_0000001
+http://purl.obolibrary.org/obo/BFO_0000017	realizable entity	http://purl.obolibrary.org/obo/BFO_0000020

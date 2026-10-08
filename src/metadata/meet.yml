@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/meet
+
+idspace: MEET
+base_url: /obo/meet
+
+products:
+- meet.owl: https://raw.githubusercontent.com/materialdigital/YZhengaa/meet-ontology/main/meet.owl
+- meet.obo: https://raw.githubusercontent.com/materialdigital/YZhengaa/meet-ontology/main/meet.obo
+
+term_browser: ontobee
+example_terms:
+- MEET_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/materialdigital/YZhengaa/meet-ontology/v
+
+- prefix: /tracker/
+  replacement: https://github.com/materialdigital/YZhengaa/meet-ontology/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/MEET?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/materialdigital/YZhengaa/meet-ontology/main/

@@ -14,15 +14,15 @@ bin/
 
 .github/token.txt
 
-/log.owl
-/log.obo
-/log.json
-/log.db
-/log-base.*
-/log-basic.*
-/log-full.*
-/log-simple.*
-/log-simple-non-classified.*
+/meet.owl
+/meet.obo
+/meet.json
+/meet.db
+/meet-base.*
+/meet-basic.*
+/meet-full.*
+/meet-simple.*
+/meet-simple-non-classified.*
 /mappings/
 /patterns/
 /reports/
@@ -32,14 +32,24 @@ src/ontology/mirror
 src/ontology/mirror/*
 src/ontology/reports/*
 !src/ontology/reports/release-diff.md
+src/ontology/meet.owl
+src/ontology/meet.obo
+src/ontology/meet.json
+src/ontology/meet.db
+src/ontology/meet-base.*
+src/ontology/meet-basic.*
+src/ontology/meet-full.*
+src/ontology/meet-simple.*
+src/ontology/meet-simple-non-classified.*
+
 src/ontology/seed.txt
 src/ontology/dosdp-tools.log
 src/ontology/ed_definitions_merged.owl
 src/ontology/ontologyterms.txt
 src/ontology/simple_seed.txt
 src/ontology/patterns
-src/ontology/merged-log-edit.owl
-src/ontology/log-edit.properties
+src/ontology/merged-meet-edit.owl
+src/ontology/meet-edit.properties
 
 src/ontology/target/
 src/ontology/tmp/*
@@ -55,10 +65,5 @@ src/patterns/data/**/*.ofn
 src/patterns/data/**/*.txt
 src/patterns/pattern_owl_seed.txt
 src/patterns/all_pattern_terms.txt
-
-
-# patterns: track hand-written files, ignore generated autoshapes
-!/patterns/
-/patterns/autoshape/auto-shapes-*.ttl
 
 # End of ODK-managed rules

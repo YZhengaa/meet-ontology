@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <group id="odk-managed-catalog" prefer="public">
+    <uri name="https://w3id.org/pmd/co/meet/imports/pmdco_import.owl" uri="imports/pmdco_import.owl" />
+    <uri name="https://w3id.org/pmd/co/meet/components/imports-edit.owl" uri="components/imports-edit.owl" />
+    <uri name="https://w3id.org/pmd/co/meet/components/meet-shared.owl" uri="components/meet-shared.owl" />
+    <uri name="https://w3id.org/pmd/co/meet/components/meet-axioms-shared.owl" uri="components/meet-axioms-shared.owl" />
+    <uri name="https://w3id.org/pmd/co/meet/components/meet-material_data.owl" uri="components/meet-material_data.owl" />
+    <uri name="https://w3id.org/pmd/co/meet/components/meet-process_data.owl" uri="components/meet-process_data.owl" />
+    <uri name="https://w3id.org/pmd/co/meet/components/meet-sustainability_info.owl" uri="components/meet-sustainability_info.owl" />
+    <uri name="https://w3id.org/pmd/co/meet/components/meet-dismantling_data.owl" uri="components/meet-dismantling_data.owl" />
+  </group>
+  <rewriteURI uriStartString="https://w3id.org/pmd/co/meet/imports/" rewritePrefix="imports/" />
+  <rewriteURI uriStartString="https://w3id.org/pmd/co/meet/components/" rewritePrefix="components/" />
+</catalog>
