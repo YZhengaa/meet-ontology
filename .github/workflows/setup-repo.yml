@@ -1636,16 +1636,21 @@ jobs:
           # Save the generated ontology commit
           GENERATED_COMMIT=$(git rev-parse HEAD)
           
-          # Get the latest remote main
+          # Re-create the GitHub remote explicitly
+          git remote remove origin 2>/dev/null || true
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git remote -v
+          
+          # Fetch the latest remote branch
           git fetch origin "${{ github.ref_name }}"
           
-          # Start from the latest remote main
+          # Start from the latest remote branch
           git checkout -B workflow-push "origin/${{ github.ref_name }}"
           
-          # Apply only the generated ontology commit on top
+          # Apply only the generated ontology commit
           git cherry-pick "$GENERATED_COMMIT"
           
-          # Push the updated history
+          # Push back to main
           git push origin HEAD:${{ github.ref_name }}
           
           echo "Changes committed and pushed to ${{ github.ref_name }}."
