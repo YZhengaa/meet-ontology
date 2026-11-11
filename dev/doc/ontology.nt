@@ -1,5 +1,5 @@
 <https://w3id.org/pmd/co/meet/meet-full.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/pmd/co/meet/meet-full.owl> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pmd/co/meet/releases/2026-11-11/meet-full.owl> .
+<https://w3id.org/pmd/co/meet/meet-full.owl> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pmd/co/meet/0.0.1> .
 <https://w3id.org/pmd/co/meet/meet-full.owl> <http://purl.org/dc/elements/1.1/creator> "Khashayar Razghandi" .
 <https://w3id.org/pmd/co/meet/meet-full.owl> <http://purl.org/dc/elements/1.1/creator> "Markus Schilling" .
 <https://w3id.org/pmd/co/meet/meet-full.owl> <http://purl.org/dc/elements/1.1/creator> "Yuan Zheng" .
@@ -117,7 +117,6 @@
 # 
 # http://purl.org/dc/elements/1.1/license
 <http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/2000/01/rdf-schema#label> "dc:license" .
 # 
 # http://purl.org/dc/elements/1.1/source
 <http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -22971,6 +22970,7 @@ _:genid2739 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.oboli
 _:genid2739 <http://www.w3.org/2002/07/owl#annotatedTarget> "A dimensionless concentration notation which denotes the amount of a given substance in a total amount of 1,000,000 regardless of the units of measure used as long as they are the same or 1 part in 10^[6]." .
 _:genid2739 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UOC:GVG" .
 # 
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/2000/01/rdf-schema#label> "dc:license" .
 # 
 <https://orcid.org/0000-0001-6772-1943> <http://www.w3.org/2000/01/rdf-schema#label> "Martin Glauer" .
 # 

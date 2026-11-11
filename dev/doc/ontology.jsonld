@@ -54399,7 +54399,7 @@
     "@value" : "Materials Experimental and Testing Data Exchange (MEET) Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/pmd/co/meet/releases/2026-11-11/meet-full.owl"
+    "@id" : "https://w3id.org/pmd/co/meet/0.0.1"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "0.0.1"
