@@ -17,9 +17,10 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/co/meet/meet-full.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/co/meet/releases/2026-11-11/meet-full.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/co/meet/0.0.1"/>
         <dc:creator>Khashayar Razghandi</dc:creator>
         <dc:creator>Markus Schilling</dc:creator>
         <dc:creator>Yuan Zheng</dc:creator>
@@ -203,6 +204,38 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license">
+        <rdfs:label>dc:license</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source">
@@ -211,6 +244,12 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:label>Source</rdfs:label>
         <rdfs:label xml:lang="en-us">Source</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -29968,9 +30007,6 @@ European Commission: Directorate-General for Research and Innovation, Biodegrada
         <owl:annotatedTarget>A dimensionless concentration notation which denotes the amount of a given substance in a total amount of 1,000,000 regardless of the units of measure used as long as they are the same or 1 part in 10^[6].</owl:annotatedTarget>
         <oboInOwl:hasDbXref>UOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
-    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/license">
-        <rdfs:label>dc:license</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="https://orcid.org/0000-0001-6772-1943">
         <rdfs:label>Martin Glauer</rdfs:label>
     </rdf:Description>
