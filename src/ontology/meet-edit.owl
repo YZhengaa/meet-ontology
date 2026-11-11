@@ -1,48 +1,256 @@
-Prefix(:=<https://w3id.org/pmd/co/meet/>)
-Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(:=<http://www.semanticweb.org/yzheng/ontologies/2026/10/untitled-ontology-32/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://w3id.org/pmd/co/meet/>
-Import(<https://w3id.org/pmd/co/meet/components/imports-edit.owl>)
-Import(<https://w3id.org/pmd/co/meet/components/meet-axioms-shared.owl>)
-Import(<https://w3id.org/pmd/co/meet/components/meet-dismantling_data.owl>)
-Import(<https://w3id.org/pmd/co/meet/components/meet-material_data.owl>)
-Import(<https://w3id.org/pmd/co/meet/components/meet-process_data.owl>)
-Import(<https://w3id.org/pmd/co/meet/components/meet-shared.owl>)
-Import(<https://w3id.org/pmd/co/meet/components/meet-sustainability_info.owl>)
-Import(<https://w3id.org/pmd/co/meet/imports/pmdco_import.owl>)
-Annotation(dcterms:description "PMD Core application ontology generated via ODK Template.
-")
-Annotation(dcterms:license <https://w3id.org/pmd/co/meet.owl#CC-BY-4.0>)
-Annotation(dcterms:title "Material Experimental and Testing Exchange Ontology")
-Annotation(dcterms:creator "Yuan Zheng")
+<https://w3id.org/pmd/co/meet/0.0.1>
+Import(<https://w3id.org/pmd/co/3.1.1>)
+Annotation(<http://purl.org/dc/terms/creator> "Khashayar Razghandi")
+Annotation(<http://purl.org/dc/terms/creator> "Markus Schilling")
+Annotation(<http://purl.org/dc/terms/creator> "Yuan Zheng")
+Annotation(<http://purl.org/dc/terms/description> "The Materials Experimental and Testing Data Exchange (MEET) Ontology is an application-level ontology built upon the Platform MaterialDigital Core Ontology (PMDco) to support interoperable, FAIR, and multi-contextual materials data exchange. It reuses and connects concepts from established ontologies while introducing application-specific concepts and semantic patterns for representing materials research data, processes, information objects, contexts, provenance, and their relationships. MEET aims to harmonize heterogeneous materials metadata, connect distributed research information, enable semantic validation, and facilitate consistent data exchange and reuse across research environments and digital infrastructures. It provides a semantic foundation for data-centric applications throughout the materials data lifecycle.")
+Annotation(<http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI)
+Annotation(<http://purl.org/dc/terms/title> "Materials Experimental and Testing Data Exchange (MEET) Ontology")
+Annotation(owl:versionInfo "0.0.1")
 
-Declaration(AnnotationProperty(dcterms:description))
-Declaration(AnnotationProperty(dcterms:license))
-Declaration(AnnotationProperty(dcterms:title))
+Declaration(Class(<http://purls.helmholtz-metadaten.de/mwo/MWO_0001220>))
+Declaration(Class(:ActualContext))
+Declaration(Class(:AssetAdministrationShell))
+Declaration(Class(:Context))
+Declaration(Class(:DataAssignment))
+Declaration(Class(:DataService))
+Declaration(Class(:Dataset))
+Declaration(Class(:DerivedDatasetAssignment))
+Declaration(Class(:DigitalProductPassport))
+Declaration(Class(:Experiment))
+Declaration(Class(:File))
+Declaration(Class(:InputDatasetAssignment))
+Declaration(Class(:Observation))
+Declaration(Class(:ObservedContext))
+Declaration(Class(:OutputDatasetAssignment))
+Declaration(Class(:PlannedContext))
+Declaration(Class(:ProcessSpecification))
+Declaration(Class(:ProcessedDatasetAssignment))
+Declaration(Class(:Product))
+Declaration(Class(:ProjectSpecification))
+Declaration(Class(:RawDatasetAssignment))
+Declaration(Class(:ReferenceDataSetAssignment))
+Declaration(Class(:Testing))
+Declaration(Class(<http://www.w3.org/ns/dcat#Catalog>))
+Declaration(Class(<http://www.w3.org/ns/dcat#Dataset>))
+Declaration(Class(<http://www.w3.org/ns/dcat#Distribution>))
+Declaration(Class(<http://www.w3.org/ns/sosa/Observation>))
+Declaration(Class(<https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription>))
+Declaration(Class(<https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document>))
+Declaration(Class(<https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset>))
+Declaration(ObjectProperty(:hasCarrier))
+Declaration(ObjectProperty(:hasContext))
+Declaration(ObjectProperty(:hasDatasetAssignment))
+Declaration(ObjectProperty(:hasDevice))
+Declaration(ObjectProperty(:hasDocumentRepresentation))
+Declaration(ObjectProperty(:isServedBy))
+Declaration(ObjectProperty(:packagedAs))
+Declaration(ObjectProperty(:meet:passportForProduct))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#dataset>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#distribution>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+
 ############################
-#   Annotation Properties
+#   Object Properties
 ############################
 
-# Annotation Property: dcterms:description (description)
+# Object Property: :hasCarrier (:hasCarrier)
 
-AnnotationAssertion(rdfs:label dcterms:description "description")
+SubObjectPropertyOf(:hasCarrier owl:topObjectProperty)
+ObjectPropertyDomain(:hasCarrier <http://purl.obolibrary.org/obo/IAO_0000310>)
+ObjectPropertyRange(:hasCarrier <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027>)
 
-# Annotation Property: dcterms:license (dcterms:license)
+# Object Property: :hasContext (:hasContext)
 
-AnnotationAssertion(rdfs:label dcterms:license "license")
+ObjectPropertyDomain(:hasContext <http://purl.obolibrary.org/obo/IAO_0000030>)
+ObjectPropertyRange(:hasContext :Context)
 
-# Annotation Property: dcterms:title (title)
+# Object Property: :hasDatasetAssignment (:hasDatasetAssignment)
 
-AnnotationAssertion(rdfs:label dcterms:title "title")
+ObjectPropertyDomain(:hasDatasetAssignment :Dataset)
+ObjectPropertyRange(:hasDatasetAssignment :DataAssignment)
 
+# Object Property: :hasDevice (:hasDevice)
+
+SubObjectPropertyOf(:hasDevice owl:topObjectProperty)
+
+# Object Property: :hasDocumentRepresentation (:hasDocumentRepresentation)
+
+SubObjectPropertyOf(:hasDocumentRepresentation owl:topObjectProperty)
+
+# Object Property: :isServedBy (:isServedBy)
+
+ObjectPropertyDomain(:isServedBy <http://purl.obolibrary.org/obo/IAO_0000030>)
+ObjectPropertyRange(:isServedBy :DataService)
+
+# Object Property: :packagedAs (:packagedAs)
+
+SubObjectPropertyOf(:packagedAs owl:topObjectProperty)
+
+# Object Property: :passportForProduct (:passportForProduct)
+
+SubObjectPropertyOf(:meet:passportForProduct <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <http://www.w3.org/ns/dcat#dataset> (<http://www.w3.org/ns/dcat#dataset>)
+
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Catalog>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Dataset>)
+
+# Object Property: <http://www.w3.org/ns/dcat#distribution> (<http://www.w3.org/ns/dcat#distribution>)
+
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#distribution> :Dataset)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#Distribution>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000104> (plan specification)
+
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000104> ObjectAllValuesFrom(:hasContext :PlannedContext))
+
+# Class: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001220> (protocol)
+
+AnnotationAssertion(rdfs:label <http://purls.helmholtz-metadaten.de/mwo/MWO_0001220> "protocol")
+SubClassOf(<http://purls.helmholtz-metadaten.de/mwo/MWO_0001220> <http://purl.obolibrary.org/obo/IAO_0000104>)
+
+# Class: :ActualContext (:ActualContext)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :ActualContext "An identified realm of data in which assertions represent circumstances that actually hold or have occurred in reality, independently of whether they were planned or observed.")
+SubClassOf(:ActualContext :Context)
+
+# Class: :AssetAdministrationShell (:AssetAdministrationShell)
+
+SubClassOf(:AssetAdministrationShell <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: :Context (:Context)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Context "An identified realm of data, representing the circumstances in which the data can be considered true.")
+SubClassOf(:Context <http://purl.obolibrary.org/obo/BFO_0000020>)
+
+# Class: :DataAssignment (:DataAssignment)
+
+SubClassOf(:DataAssignment <http://purl.obolibrary.org/obo/BFO_0000035>)
+
+# Class: :Dataset (:Dataset)
+
+EquivalentClasses(:Dataset <http://www.w3.org/ns/dcat#Dataset>)
+SubClassOf(:Dataset <http://purl.obolibrary.org/obo/IAO_0000027>)
+
+# Class: :DerivedDatasetAssignment (:DerivedDatasetAssignment)
+
+SubClassOf(:DerivedDatasetAssignment :DataAssignment)
+
+# Class: :DigitalProductPassport (:DigitalProductPassport)
+
+SubClassOf(:DigitalProductPassport <http://purl.obolibrary.org/obo/IAO_0000030>)
+SubClassOf(:DigitalProductPassport ObjectSomeValuesFrom(:meet:passportForProduct :Product))
+
+# Class: :Experiment (:Experiment)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Experiment "A planned process in which a material, specimen, system, or phenomenon is investigated through controlled actions or observations to generate evidence about it.")
+SubClassOf(:Experiment <http://purl.obolibrary.org/obo/COB_0000082>)
+
+# Class: :File (:File)
+
+EquivalentClasses(:File <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027>)
+SubClassOf(:File <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: :InputDatasetAssignment (:InputDatasetAssignment)
+
+SubClassOf(:InputDatasetAssignment :DataAssignment)
+
+# Class: :Observation (:Observation)
+
+EquivalentClasses(:Observation <http://www.w3.org/ns/sosa/Observation>)
+SubClassOf(:Observation <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Class: :ObservedContext (:ObservedContext)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :ObservedContext "An identified realm of data in which assertions represent circumstances as observed, measured, or otherwise recorded through an observation process, without necessarily establishing that they correspond exactly to actual circumstances.")
+SubClassOf(:ObservedContext :Context)
+
+# Class: :OutputDatasetAssignment (:OutputDatasetAssignment)
+
+SubClassOf(:OutputDatasetAssignment :DataAssignment)
+
+# Class: :PlannedContext (:PlannedContext)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :PlannedContext "An identified realm of data in which assertions represent intended, prescribed, or expected circumstances, as specified in a plan, design, requirement, or other intentional specification.")
+SubClassOf(:PlannedContext :Context)
+
+# Class: :ProcessSpecification (:ProcessSpecification)
+
+SubClassOf(:ProcessSpecification <http://purl.obolibrary.org/obo/IAO_0000104>)
+
+# Class: :ProcessedDatasetAssignment (:ProcessedDatasetAssignment)
+
+SubClassOf(:ProcessedDatasetAssignment :DataAssignment)
+
+# Class: :Product (:Product)
+
+SubClassOf(:Product <http://purl.obolibrary.org/obo/BFO_0000040>)
+
+# Class: :ProjectSpecification (:ProjectSpecification)
+
+SubClassOf(:ProjectSpecification <http://purl.obolibrary.org/obo/IAO_0000104>)
+
+# Class: :RawDatasetAssignment (:RawDatasetAssignment)
+
+SubClassOf(:RawDatasetAssignment :DataAssignment)
+
+# Class: :ReferenceDataSetAssignment (:ReferenceDataSetAssignment)
+
+SubClassOf(:ReferenceDataSetAssignment :DataAssignment)
+
+# Class: :Testing (:Testing)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :Testing "A planned process in which a material, specimen, device, or system is evaluated under specified conditions to determine a property, performance, behavior, or conformity with stated criteria.")
+SubClassOf(:Testing <http://purl.obolibrary.org/obo/COB_0000082>)
+
+# Class: <http://www.w3.org/ns/dcat#Catalog> (<http://www.w3.org/ns/dcat#Catalog>)
+
+SubClassOf(<http://www.w3.org/ns/dcat#Catalog> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <http://www.w3.org/ns/dcat#Dataset> (<http://www.w3.org/ns/dcat#Dataset>)
+
+SubClassOf(<http://www.w3.org/ns/dcat#Dataset> <http://purl.obolibrary.org/obo/IAO_0000027>)
+
+# Class: <http://www.w3.org/ns/dcat#Distribution> (<http://www.w3.org/ns/dcat#Distribution>)
+
+SubClassOf(<http://www.w3.org/ns/dcat#Distribution> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <http://www.w3.org/ns/sosa/Observation> (<http://www.w3.org/ns/sosa/Observation>)
+
+SubClassOf(<http://www.w3.org/ns/sosa/Observation> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Class: <https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription> (<https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription> "A metadata description of a container that lists its internal and external document references and identifies its link datasets.")
+SubClassOf(<https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document> (<https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document>)
+
+SubClassOf(<https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset> (<https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset> "A reference to an RDF dataset within a container that records links between documents or between elements of those documents.")
+SubClassOf(<https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 
 )
