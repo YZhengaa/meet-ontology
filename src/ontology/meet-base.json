@@ -3,25 +3,34 @@
     "id" : "https://w3id.org/pmd/co/meet/meet-base.json",
     "meta" : {
       "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "val" : "Khashayar Razghandi"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "val" : "Markus Schilling"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "val" : "Yuan Zheng"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/description",
+        "val" : "The Materials Experimental and Testing Data Exchange (MEET) Ontology is an application-level ontology built upon the Platform MaterialDigital Core Ontology (PMDco) to support interoperable, FAIR, and multi-contextual materials data exchange. It reuses and connects concepts from established ontologies while introducing application-specific concepts and semantic patterns for representing materials research data, processes, information objects, contexts, provenance, and their relationships. MEET aims to harmonize heterogeneous materials metadata, connect distributed research information, enable semantic validation, and facilitate consistent data exchange and reuse across research environments and digital infrastructures. It provides a semantic foundation for data-centric applications throughout the materials data lifecycle."
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/license",
+        "val" : "https://creativecommons.org/licenses/by/4.0/"
+      }, {
+        "pred" : "http://purl.org/dc/elements/1.1/title",
+        "val" : "Materials Experimental and Testing Data Exchange (MEET) Ontology"
+      }, {
         "pred" : "http://purl.org/dc/elements/1.1/type",
         "val" : "http://purl.obolibrary.org/obo/IAO_8000001"
       }, {
-        "pred" : "http://purl.org/dc/terms/creator",
-        "val" : "Yuan Zheng"
-      }, {
-        "pred" : "http://purl.org/dc/terms/description",
-        "val" : "PMD Core application ontology generated via ODK Template.\n"
-      }, {
-        "pred" : "http://purl.org/dc/terms/license",
-        "val" : "https://w3id.org/pmd/co/meet.owl#CC-BY-4.0"
-      }, {
-        "pred" : "http://purl.org/dc/terms/title",
-        "val" : "Material Experimental and Testing Exchange Ontology"
+        "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
+        "val" : "0.0.1"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-10-08"
+        "val" : "2026-11-11"
       } ],
-      "version" : "https://w3id.org/pmd/co/meet/releases/2026-10-08/meet-base.json"
+      "version" : "https://w3id.org/pmd/co/meet/releases/2026-11-11/meet-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.org/dc/elements/1.1/type",
